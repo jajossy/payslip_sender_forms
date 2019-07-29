@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace payslip_sender_forms
 {
-    public partial class Form1 : Form
+    public partial class payslipForm : Form
     {
-        public Form1()
+        public payslipForm()
         {
             InitializeComponent();
         }

@@ -19,12 +19,29 @@ namespace payslip_sender_forms
             InitializeComponent();
         }
 
+        payslipForm frmPayslip;
+
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
+            /*Form childForm = new Form();
             childForm.MdiParent = this;
             childForm.Text = "Window " + childFormNumber++;
-            childForm.Show();
+            childForm.Show();*/
+            if (frmPayslip == null)
+            {
+                frmPayslip = new payslipForm();
+                frmPayslip.MdiParent = this;
+                frmPayslip.FormClosed += new FormClosedEventHandler(FrmPayslip_FormClosed);
+                frmPayslip.WindowState = FormWindowState.Maximized;
+                frmPayslip.Show();
+            }
+            else
+                frmPayslip.Activate();
+        }
+
+        private void FrmPayslip_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmPayslip = null;
         }
 
         private void OpenFile(object sender, EventArgs e)
