@@ -1,9 +1,9 @@
 E:\repository\payslip_sender_forms\payslip_sender_forms\bin\Debug\payslip_sender_forms.exe.config
 E:\repository\payslip_sender_forms\payslip_sender_forms\bin\Debug\payslip_sender_forms.exe
 E:\repository\payslip_sender_forms\payslip_sender_forms\bin\Debug\payslip_sender_forms.pdb
-E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender_forms.csprojResolveAssemblyReference.cache
 E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender_forms.MDIParent1.resources
 E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender_forms.Properties.Resources.resources
 E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender_forms.csproj.GenerateResource.Cache
 E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender_forms.exe
 E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender_forms.pdb
+E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender_forms.payslipForm.resources
