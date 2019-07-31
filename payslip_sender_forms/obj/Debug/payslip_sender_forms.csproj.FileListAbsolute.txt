@@ -7,3 +7,10 @@ E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender
 E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender_forms.exe
 E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender_forms.pdb
 E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender_forms.payslipForm.resources
+E:\repository\payslip_sender_forms\payslip_sender_forms\obj\Debug\payslip_sender_forms.csprojResolveAssemblyReference.cache
+E:\repository\payslip_sender_forms\payslip_sender_forms\bin\Debug\itextsharp.dll
+E:\repository\payslip_sender_forms\payslip_sender_forms\bin\Debug\itextsharp.xml
+E:\repository\payslip_sender_forms\payslip_sender_forms\bin\Debug\EntityFramework.dll
+E:\repository\payslip_sender_forms\payslip_sender_forms\bin\Debug\EntityFramework.SqlServer.dll
+E:\repository\payslip_sender_forms\payslip_sender_forms\bin\Debug\EntityFramework.xml
+E:\repository\payslip_sender_forms\payslip_sender_forms\bin\Debug\EntityFramework.SqlServer.xml
