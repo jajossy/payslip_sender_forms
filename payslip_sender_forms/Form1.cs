@@ -21,6 +21,7 @@ namespace payslip_sender_forms
     public partial class payslipForm : Form
     {
         static string source_file = "";
+        static int totalPages = 0;
         public payslipForm()
         {
             InitializeComponent();
@@ -29,12 +30,18 @@ namespace payslip_sender_forms
             backgroundWorker1.WorkerReportsProgress = true;
             // This event will be raised when we call ReportProgress
             backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
+
+            // check if folder containing split is empty
+            if (DirectoryIsEmpty("C:/numberSplit/"))
+                button1.Enabled = false;
+            else
+                button1.Enabled = true;
         }
 
         private void Form1_Load(object sender, System.EventArgs e)
-        {
+        {            
             // Start the BackgroundWorker.
-            backgroundWorker1.RunWorkerAsync();
+            backgroundWorker1.RunWorkerAsync();            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -77,6 +84,7 @@ namespace payslip_sender_forms
 
                     //create PdfReader object
                     PdfReader reader = new PdfReader(source_file);
+                    totalPages = reader.NumberOfPages;
 
                     for (int i = 1; i <= reader.NumberOfPages; i++)
                     {
@@ -134,6 +142,18 @@ namespace payslip_sender_forms
                         }
                         splitInfoLabel.Text = "Slpitting Payslip into ippis naming based pages";
                         Thread.Sleep(100);
+                        // write into listbox
+                        listBox2.Items.Add(numberSplit + i + ".pdf");
+                        listBox2.Refresh();
+                        listBox2.SelectedIndex = listBox2.Items.Count - 1;
+                        listBox2.SelectedIndex = -1;
+
+                        progressBar2.Value = i * progressBar2.Maximum / totalPages;
+                        // Report progress.
+                        backgroundWorker1.ReportProgress(i);
+                        // Wait 100 milliseconds.
+
+                        Application.DoEvents(); //keep form active in every loop
 
                     }
 
@@ -292,7 +312,24 @@ namespace payslip_sender_forms
         {
             // Return true if strIn is in valid e-mail format.
             return Regex.IsMatch(strIn, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
-        }        
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] fileNames = Directory.GetFiles(@"C:/numberSplit/");
+            foreach (string fileName in fileNames)
+                File.Delete(fileName);
+        }
+
+        public bool DirectoryIsEmpty(string path)
+        {
+            int fileCount = Directory.GetFiles(path).Length;
+            if (fileCount > 0)
+            {
+                return false;
+            }          
+
+            return true;
+        }
     }
 }

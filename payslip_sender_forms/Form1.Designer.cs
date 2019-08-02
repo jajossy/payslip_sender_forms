@@ -38,6 +38,8 @@
             this.LabelTotal = new System.Windows.Forms.Label();
             this.LabelPresentage = new System.Windows.Forms.Label();
             this.splitInfoLabel = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // button1
@@ -48,6 +50,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -61,7 +64,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(60, 132);
+            this.button3.Location = new System.Drawing.Point(28, 132);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -72,9 +75,9 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(156, 164);
+            this.listBox1.Location = new System.Drawing.Point(124, 164);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(419, 212);
+            this.listBox1.Size = new System.Drawing.Size(259, 212);
             this.listBox1.TabIndex = 3;
             // 
             // label1
@@ -87,43 +90,57 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(156, 392);
+            this.progressBar1.Location = new System.Drawing.Point(124, 392);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(419, 23);
+            this.progressBar1.Size = new System.Drawing.Size(259, 23);
             this.progressBar1.TabIndex = 5;
             // 
             // LabelTotal
             // 
             this.LabelTotal.AutoSize = true;
-            this.LabelTotal.Location = new System.Drawing.Point(57, 227);
+            this.LabelTotal.Location = new System.Drawing.Point(25, 227);
             this.LabelTotal.Name = "LabelTotal";
-            this.LabelTotal.Size = new System.Drawing.Size(57, 13);
+            this.LabelTotal.Size = new System.Drawing.Size(0, 13);
             this.LabelTotal.TabIndex = 6;
-            this.LabelTotal.Text = "LabelTotal";
             // 
             // LabelPresentage
             // 
             this.LabelPresentage.AutoSize = true;
-            this.LabelPresentage.Location = new System.Drawing.Point(57, 296);
+            this.LabelPresentage.Location = new System.Drawing.Point(25, 296);
             this.LabelPresentage.Name = "LabelPresentage";
-            this.LabelPresentage.Size = new System.Drawing.Size(87, 13);
+            this.LabelPresentage.Size = new System.Drawing.Size(0, 13);
             this.LabelPresentage.TabIndex = 7;
-            this.LabelPresentage.Text = "LabelPresentage";
             // 
             // splitInfoLabel
             // 
             this.splitInfoLabel.AutoSize = true;
-            this.splitInfoLabel.Location = new System.Drawing.Point(159, 142);
+            this.splitInfoLabel.Location = new System.Drawing.Point(127, 142);
             this.splitInfoLabel.Name = "splitInfoLabel";
-            this.splitInfoLabel.Size = new System.Drawing.Size(69, 13);
+            this.splitInfoLabel.Size = new System.Drawing.Size(0, 13);
             this.splitInfoLabel.TabIndex = 8;
-            this.splitInfoLabel.Text = "splitInfoLabel";
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(463, 161);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(234, 212);
+            this.listBox2.TabIndex = 9;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(463, 392);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(234, 23);
+            this.progressBar2.TabIndex = 10;
             // 
             // payslipForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 464);
+            this.ClientSize = new System.Drawing.Size(747, 493);
+            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.splitInfoLabel);
             this.Controls.Add(this.LabelPresentage);
             this.Controls.Add(this.LabelTotal);
@@ -152,6 +169,8 @@
         private System.Windows.Forms.Label LabelTotal;
         private System.Windows.Forms.Label LabelPresentage;
         private System.Windows.Forms.Label splitInfoLabel;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ProgressBar progressBar2;
     }
 }
 
